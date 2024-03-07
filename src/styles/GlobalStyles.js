@@ -29,4 +29,7 @@ export const GlobalStyles = createGlobalStyle`
     margin-bottom: 0;
     padding-left: 0;
   }  
+  p{
+    margin: 0;
+  }
 `;

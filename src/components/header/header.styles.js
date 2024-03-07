@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
+	width: 100%;
 	background-color: #20222f;
 	border-radius: 0 0 20px 20px;
 	height: 235px;

@@ -1,15 +1,25 @@
-const BigBox =()=>{
+import { StyledBigBox, StyledContainerUporDown, StyledFollowersNumber, StyledImageContainer, StyledSpan, StyledType } from "./big-box.styles"
+
+const BigBox =({img, user, followers, type,bordercolor,followerschange,up,arrow})=>{
     return (
         <>
-            <div>
-             <img src="/images/icon-facebook.svg" alt="" />
-                <span>@nathanf</span>
-                <p>1987</p>
-                <p>Followers</p>
-                <img src="/images/icon-up.svg" alt="" />
-                <span>12 Today</span>
-            </div>
+      
+            <StyledBigBox $bordercolor={bordercolor}>
+                <StyledImageContainer>
+                    <img src={img} alt="" />
+                    <StyledSpan>{user}</StyledSpan>
+                </StyledImageContainer>
+                
+                <StyledFollowersNumber>{followers}</StyledFollowersNumber>
+                <StyledType>{type}</StyledType>
+                <StyledContainerUporDown>
+                    <img src={arrow} alt="" color={up}/>
+                    <StyledSpan>{followerschange}</StyledSpan>
+                </StyledContainerUporDown>
+                
+            </StyledBigBox>
         </>
     )
+    
 }
 export default BigBox
